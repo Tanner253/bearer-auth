@@ -4,6 +4,7 @@ A useless HTTP server for demonstration purposes.
 
 ## Deployed
 [deployed](https://barer-auth-tp.herokuapp.com/)
+my tests are passing and i asked for ta help but none came -> deployment is failing...
 ## coming soon!
 ![UML Diagram]();
 
@@ -22,3 +23,5 @@ Once installed, run `npm start`
 - Tanner Percival
 
 ## Features / Routes
+
+This repo highlights the backend authentication being handles with bearer jwt tokens.
