@@ -13,8 +13,14 @@ const DATABASE_CONFIG = process.env.NODE_ENV === 'production' ? {
   }
 } : {};
 
-const sequelize = new Sequelize(DATABASE_URL, DATABASE_CONFIG);
-
+const sequelize = new Sequelize(DATABASE_URL, DATABASE_CONFIG, {
+  dialectOptions:{
+    ssl:{
+      require:true,
+      rejectUnauthorized: false,
+    },
+  },
+});
 module.exports = {
   db: sequelize,
   users: userSchema(sequelize, DataTypes),
